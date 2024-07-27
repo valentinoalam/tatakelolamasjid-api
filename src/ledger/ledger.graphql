@@ -1,0 +1,24 @@
+type Ledger {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateLedgerInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateLedgerInput {
+  id: Int!
+}
+
+type Query {
+  ledger: [Ledger]!
+  ledger(id: Int!): Ledger
+}
+
+type Mutation {
+  createLedger(createLedgerInput: CreateLedgerInput!): Ledger!
+  updateLedger(updateLedgerInput: UpdateLedgerInput!): Ledger!
+  removeLedger(id: Int!): Ledger
+}

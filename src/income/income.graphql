@@ -1,0 +1,24 @@
+type Income {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateIncomeInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateIncomeInput {
+  id: Int!
+}
+
+type Query {
+  income: [Income]!
+  income(id: Int!): Income
+}
+
+type Mutation {
+  createIncome(createIncomeInput: CreateIncomeInput!): Income!
+  updateIncome(updateIncomeInput: UpdateIncomeInput!): Income!
+  removeIncome(id: Int!): Income
+}

@@ -1,0 +1,24 @@
+type BankAccount {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateBankAccountInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateBankAccountInput {
+  id: Int!
+}
+
+type Query {
+  bankAccount: [BankAccount]!
+  bankAccount(id: Int!): BankAccount
+}
+
+type Mutation {
+  createBankAccount(createBankAccountInput: CreateBankAccountInput!): BankAccount!
+  updateBankAccount(updateBankAccountInput: UpdateBankAccountInput!): BankAccount!
+  removeBankAccount(id: Int!): BankAccount
+}

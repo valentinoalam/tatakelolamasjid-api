@@ -1,0 +1,24 @@
+type Expense {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateExpenseInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateExpenseInput {
+  id: Int!
+}
+
+type Query {
+  expenses: [Expense]!
+  expense(id: Int!): Expense
+}
+
+type Mutation {
+  createExpense(createExpenseInput: CreateExpenseInput!): Expense!
+  updateExpense(updateExpenseInput: UpdateExpenseInput!): Expense!
+  removeExpense(id: Int!): Expense
+}

@@ -1,0 +1,24 @@
+type PaymentMethod {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreatePaymentMethodInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdatePaymentMethodInput {
+  id: Int!
+}
+
+type Query {
+  paymentMethods: [PaymentMethod]!
+  paymentMethod(id: Int!): PaymentMethod
+}
+
+type Mutation {
+  createPaymentMethod(createPaymentMethodInput: CreatePaymentMethodInput!): PaymentMethod!
+  updatePaymentMethod(updatePaymentMethodInput: UpdatePaymentMethodInput!): PaymentMethod!
+  removePaymentMethod(id: Int!): PaymentMethod
+}

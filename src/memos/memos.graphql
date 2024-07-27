@@ -1,0 +1,24 @@
+type Memo {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateMemoInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateMemoInput {
+  id: Int!
+}
+
+type Query {
+  memos: [Memo]!
+  memo(id: Int!): Memo
+}
+
+type Mutation {
+  createMemo(createMemoInput: CreateMemoInput!): Memo!
+  updateMemo(updateMemoInput: UpdateMemoInput!): Memo!
+  removeMemo(id: Int!): Memo
+}

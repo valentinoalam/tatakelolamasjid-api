@@ -1,0 +1,24 @@
+type Vendor {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateVendorInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateVendorInput {
+  id: Int!
+}
+
+type Query {
+  vendors: [Vendor]!
+  vendor(id: Int!): Vendor
+}
+
+type Mutation {
+  createVendor(createVendorInput: CreateVendorInput!): Vendor!
+  updateVendor(updateVendorInput: UpdateVendorInput!): Vendor!
+  removeVendor(id: Int!): Vendor
+}

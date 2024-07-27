@@ -1,0 +1,24 @@
+type Report {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateReportInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateReportInput {
+  id: Int!
+}
+
+type Query {
+  reports: [Report]!
+  report(id: Int!): Report
+}
+
+type Mutation {
+  createReport(createReportInput: CreateReportInput!): Report!
+  updateReport(updateReportInput: UpdateReportInput!): Report!
+  removeReport(id: Int!): Report
+}

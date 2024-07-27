@@ -1,0 +1,24 @@
+type Journal {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateJournalInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateJournalInput {
+  id: Int!
+}
+
+type Query {
+  journal: [Journal]!
+  journal(id: Int!): Journal
+}
+
+type Mutation {
+  createJournal(createJournalInput: CreateJournalInput!): Journal!
+  updateJournal(updateJournalInput: UpdateJournalInput!): Journal!
+  removeJournal(id: Int!): Journal
+}
